@@ -16,12 +16,12 @@ function createAccount() {
     var username = document.getElementById("username").value;  
     var password = document.getElementById("password").value;  
   
-    // 出于安全考虑，这里只保存用户名  
+   
     setCookie("username", username, 7);  
-    // 注意：出于演示目的，这里也保存了密码（但不建议这样做）  
-    setCookie("password", password, 7); // 警告：不要在生产环境中这样做！  
+   
+    setCookie("password", password, 7);  
   
-    // 这里不跳转，只是提示用户  
+   
     alert("Account created and credentials saved in cookies.");  
 }  
 </script>  
