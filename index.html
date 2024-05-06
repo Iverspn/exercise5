@@ -1,0 +1,39 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Create Account</title>  
+<script>  
+function setCookie(name, value, days) {  
+    var date = new Date();  
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));  
+    var expires = "; expires=" + date.toUTCString();  
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";  
+}  
+  
+function createAccount() {  
+    var username = document.getElementById("username").value;  
+    var password = document.getElementById("password").value;  
+  
+    // 出于安全考虑，这里只保存用户名  
+    setCookie("username", username, 7);  
+    // 注意：出于演示目的，这里也保存了密码（但不建议这样做）  
+    setCookie("password", password, 7); // 警告：不要在生产环境中这样做！  
+  
+    // 这里不跳转，只是提示用户  
+    alert("Account created and credentials saved in cookies.");  
+}  
+</script>  
+</head>  
+<body>  
+  
+<h1>Create Account</h1>  
+<form onsubmit="createAccount(); return false;">  
+    <input type="text" id="username" placeholder="Username">  
+    <input type="password" id="password" placeholder="Password">  
+    <button type="submit">Create Account</button>  
+</form>  
+  
+</body>  
+</html>
