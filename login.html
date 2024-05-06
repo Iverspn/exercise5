@@ -19,10 +19,10 @@ function checkCredentials() {
     var usernameCookie = getCookie("username");  
     var passwordCookie = getCookie("password");  
 
-    // 注意：出于安全原因，这里不检查密码cookie  
+    
   
     if (usernameInput === usernameCookie) {  
-        // 模拟服务器端验证成功（实际上您应该发送AJAX请求到服务器）  
+         
         window.location.href = "shopping.html";  
     } else {  
         alert("Invalid username or password.");  
