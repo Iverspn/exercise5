@@ -14,7 +14,10 @@ function createAccount() {
     setCookie("username", username, 7);  
    
     setCookie("password", password, 7);  
-  
+  var redirectUrl = 'login.html';
    
     alert("Account created and credentials saved in cookies.");  
-}  
+setTimeout(function() {  
+        window.location.href = redirectUrl;  
+    }, 0); 
+}
