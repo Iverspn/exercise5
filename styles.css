@@ -66,7 +66,7 @@ button:hover {
   .copyright {  
     margin-top: 10px;  
   }  
-.loginpage{
+#loginpage{
      text-align: center;  }
-.pgp{text-align: center; }
+#pgp{text-align: center; }
     
